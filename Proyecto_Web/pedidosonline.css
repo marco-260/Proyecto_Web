@@ -1,0 +1,281 @@
+/* ------------------ HEADER ------------------ */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-small {
+    width: 200px;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .logo-title {
+        flex-direction: column;
+    }
+    .logo-small {
+        width: 90px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #979824, #1c1c1c, #848218);
+    color: rgb(8, 8, 8);
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background: #f4c430;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #fffcf2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-family: 'Chelsea Market', cursive;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 6px #f5c400;
+}
+
+/* ------------------ PEDIDOS ------------------ */
+.pedidos {
+    background: rgba(80, 80, 80, 0.35);
+    padding: 2.5rem;
+    margin: 2.5rem auto;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+
+.titulo-pedidos {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+    color: #f5c400;
+    text-shadow: 0 0 6px #000;
+}
+
+.subtitulo-pedidos {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    margin-bottom: 2.2rem;
+}
+
+.formulario-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.formulario-pedido label {
+    font-weight: bold;
+    color: #f2f2f2;
+}
+
+.formulario-pedido input,
+.formulario-pedido select,
+.formulario-pedido textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #f1f1f1;
+    color: #000000;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+.formulario-pedido textarea {
+    resize: none;
+}
+
+.btn-pedido, #btn-agregar {
+    background: linear-gradient(90deg, #f5c400, #d9a700);
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.btn-pedido:hover, #btn-agregar:hover {
+    background: #b89000;
+    transform: scale(1.03);
+}
+
+#lista-pedido {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #000;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+#lista-pedido ul {
+    list-style: inside disc;
+    padding-left: 0;
+    margin: 0;
+}
+
+#lista-pedido li {
+    margin-bottom: 0.4rem;
+}
+
+.confirmacion {
+    margin-top: 2rem;
+    background: #f5c400;
+    padding: 1.4rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+    border: 2px solid #d9a700;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    margin-top: 3rem;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 2rem 0;
+    text-align: center;
+    color: #e0e0e0;
+    border-top: 2px solid #f5c400;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+}
+
+/* ------------------ PAGO ------------------ */
+.pago {
+    background: rgba(50, 50, 50, 0.45);
+    padding: 2.5rem;
+    margin: 2.5rem auto;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+.titulo-pago {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    color: #f5c400;
+    text-shadow: 0 0 6px #000;
+}
+
+.subtitulo-pago {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #d1d1d1;
+    margin-bottom: 2rem;
+}
+
+.formulario-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.formulario-pago label {
+    font-weight: bold;
+    color: #f2f2f2;
+}
+
+.formulario-pago input,
+.formulario-pago select {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #f1f1f1;
+    color: #000000;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+/* Resumen del pedido dentro de pago */
+.resumen-pedido {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    max-height: 180px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.resumen-pedido ul {
+    list-style: inside disc;
+    padding-left: 0;
+    margin: 0;
+}
+
+.resumen-pedido li {
+    margin-bottom: 0.4rem;
+}
+
+/* Confirmación de pago */
+#confirmacion-pago {
+    margin-top: 2rem;
+    background: #f5c400;
+    padding: 1.4rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+    border: 2px solid #d9a700;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}

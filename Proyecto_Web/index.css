@@ -1,0 +1,354 @@
+/* ==============================
+   RESET GENERAL
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fae79d;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* ==============================
+   CONTENEDOR GENERAL
+============================== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==============================
+   HEADER
+============================== */
+header {
+    background: #f4c430; /* FONDO DE TITULO */
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Chelsea Market', cursive;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title-with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.logo-small {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.logo h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #000000;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-top: 0.3rem;
+}
+
+/* ==============================
+   NAVEGACIÓN
+============================== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    background: #FFFFFF;
+}
+
+nav a:hover {
+    background: #000000;
+    color: #FFD700;
+}
+
+/* ==============================
+   HERO
+============================== */
+.hero {
+    background: url("fondo/fondo-mar.jpg") center/cover no-repeat;
+    padding: 60px 0;
+    border-bottom: 4px solid #000000;
+}
+
+.hero .container {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+/* ==============================
+   GALERÍA
+============================== */
+#sabores {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+#sabores h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.galeria-simple {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.galeria-simple .item {
+    text-align: center;
+}
+
+.galeria-simple img {
+    width: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #000000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.galeria-simple img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.galeria-simple p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* ==============================
+   MENÚ DE PLATOS
+============================== */
+.menu-box {
+    background: #E5E5E5;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.menu-table th {
+    background: #FFD700;
+    padding: 12px;
+}
+
+.menu-table td {
+    padding: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.price {
+    font-weight: bold;
+    color: #000000;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* ==============================
+   CONTACTO
+============================== */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.telefono {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* ==============================
+   RESEÑAS
+============================== */
+.reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.reseña {
+    background: #FFFFFF;
+    color: #000000;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+/* ==============================
+   FOOTER & REDES SOCIALES
+============================== */
+footer {
+    background: #FFD700;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    color: #000000;
+}
+
+.redes-sociales {
+    margin-top: 15px;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    font-size: 1.8rem;
+    color: #000000;
+    transition: transform 0.3s, color 0.3s;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .galeria-simple {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria-simple img {
+        width: 85%;
+        max-width: 350px;
+    }
+
+    .menu-box {
+        padding: 20px;
+    }
+
+    .menu-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-small {
+        width: 90px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    #sabores {
+        padding: 2rem 1rem;
+    }
+
+    .galeria-simple img {
+        width: 95%;
+    }
+
+    .reseñas-grid,
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 20px 10px;
+    }
+
+    .title-with-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,115 @@
+/* ------ LOGO EN EL H1 SIN MARCO ------- */
+
+.title-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-small {
+    width: 200px;   /* tamaño más grande */
+    height: auto;
+    display: block;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .title-with-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-small {
+        width: 90px;   /* en móvil destaca más */
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #af9a9a, #2c2c2c, #e5e5e5);
+    color: white;
+}
+
+header {
+    background: rgba(0,0,0,0.7);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 3px solid #ffcc00;
+}
+
+header h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 2.4rem;
+    color: #ffcc00;
+}
+
+.tagline {
+    color: #eeeeee;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.reclamaciones {
+    background: rgba(255,255,255,0.1);
+    margin: 3rem auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.reclamaciones h2 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, select, textarea {
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-enviar {
+    background: black;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background: #333;
+}
+
+.confirmacion {
+    margin-top: 2rem;
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 3rem;
+    background: black;
+    text-align: center;
+    padding: 2rem;
+}

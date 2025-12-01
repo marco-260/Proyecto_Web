@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pedidos Online | Mar & Luna Rock & Fish - Chimbote</title>
+    <meta name="description" content="Haz tu pedido online en Mar & Luna Rock & Fish. Entrega rápida en Chimbote." />
+    <link rel="stylesheet" href="./pedidosonline.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+
+        <!-- TITULO + LOGO -->
+        <div class="logo-title">
+            <img src="image.png" alt="Logo" class="logo-small" />
+            <div>
+                <h1>--- MAR & LUNA ROCK & FISH ---</h1>
+            </div>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+            <ul>
+                <li><a href="marlunarockyfish.html">🏠 Inicio</a></li>
+                <li><a href="carta.html">📋 Carta</a></li>
+                <li><a href="reservas.html">📅 Reservas</a></li>
+                <li><a href="libro-reclamaciones.html">📖 Libro de Reclamaciones</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+    <!-- SECCIÓN PEDIDOS -->
+    <section id="pedidos" class="pedidos">
+        <div class="container">
+            <h2 class="titulo-pedidos">🛒 Pedidos Online</h2>
+            <p class="subtitulo-pedidos">Haz tu pedido rápido, fácil y seguro 🏠</p>
+
+            <form id="form-pedido" class="formulario-pedido">
+
+                <label for="nombre">👤 Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="telefono">📱 Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required />
+
+                <label for="email">📧 Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="direccion">🏠 Dirección de Envío:</label>
+                <textarea id="direccion" name="direccion" rows="1" required></textarea>
+
+                <hr style="margin: 2rem 0" />
+
+                <!-- Selección de Categoría -->
+                <label for="categoria">🍽️ Selecciona Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="">-- Elige una categoría --</option>
+                </select>
+
+                <!-- Selección de Plato -->
+                <label for="plato">🍲 Selecciona Plato:</label>
+                <select id="plato" name="plato" disabled>
+                    <option value="">-- Primero selecciona categoría --</option>
+                </select>
+
+                <!-- Botón para agregar plato -->
+                <button type="button" id="btn-agregar" disabled>➕ Agregar Plato</button>
+
+                <!-- Lista dinámica del pedido -->
+                <div id="lista-pedido" style="margin-top: 1rem;"></div>
+
+                <!-- Campo oculto para enviar pedido como texto -->
+                <input type="hidden" id="pedido-final" name="pedido" />
+
+                <button type="submit" class="btn-pedido" style="margin-top: 2rem;">✅ Confirmar Pedido</button>
+            </form>
+
+            <div id="confirmacion" class="confirmacion" style="display:none;">
+                <h3>🎉 ¡Pedido registrado con éxito!</h3>
+                <p>Ahora, completa la sección de pago para finalizar tu pedido.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PAGO -->
+    <section id="pago" class="pago" style="display:none;">
+        <div class="container">
+            <h2 class="titulo-pago">💳 Pago Seguro</h2>
+            <p class="subtitulo-pago">Completa tus datos para finalizar tu pedido 🛒</p>
+
+            <div class="resumen-pedido">
+                <h3>Resumen de tu pedido:</h3>
+                <ul id="resumen-pedido-ul"></ul>
+            </div>
+
+            <form id="form-pago" class="formulario-pago">
+                <label for="nombrePago">👤 Nombre Completo:</label>
+                <input type="text" id="nombrePago" name="nombrePago" required />
+
+                <label for="emailPago">📧 Correo Electrónico:</label>
+                <input type="email" id="emailPago" name="emailPago" required />
+
+                <label for="metodo">💳 Método de Pago:</label>
+                <select id="metodo" name="metodo" required>
+                    <option value="">Selecciona...</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="paypal">Yape/Plin</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                    <option value="transferencia">Efectivo</option>
+                </select>
+
+                <div id="detalles-tarjeta" style="display:none;">
+                    <label for="numero">Número de Tarjeta:</label>
+                    <input type="text" id="numero" placeholder="1234 5678 9012 3456" />
+
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc" placeholder="123" />
+
+                    <label for="fecha">Fecha de Expiración:</label>
+                    <input type="text" id="fecha" placeholder="MM/AA" />
+                </div>
+
+                <button type="submit" class="btn-pedido" style="margin-top: 1rem;">✅ Confirmar Pago</button>
+            </form>
+
+            <div id="confirmacion-pago" class="confirmacion" style="display:none;">
+                <h3>🎉 ¡Pago realizado con éxito!</h3>
+                <p>Gracias por tu compra. Pronto recibirás tu pedido.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+      <br />
+      <p>&copy; 2025 Mar & Luna Rock & Fish - Chimbote</p>
+      <p>Jr. Villavicencio 104, Frente a la Bahía | La Cevichería Más Popular de Chimbote</p>
+      <p>Desde 2015 sirviendo los mejores mariscos con ambiente rockero</p>
+    </div>
+</footer>
+
+<script src="pedidosonline.js"></script>
+</body>
+</html>
